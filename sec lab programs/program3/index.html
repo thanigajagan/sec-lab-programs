@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Text Analyzer</title>
+</head>
+<body>
+ <h2>Mini Text Analyzer</h2>
+<textarea id="paragraph Input" placeholder="Enter a paragraph" rows="6" cols="60"></textarea></body><br>
+<button onclick="analyzerText">Analyzer</button>
+<pre id="output"></html></pre>
+<script>
+function analyzerText(){
+const Text=document.getElementById("paragraphInput").value;
+const totalchars=Text.Length;
+const words=Text.match||[];
+const totalWords=words.length;
+const totalSentences=(Text.match(/[..!?]/g))||[].length;
+const uniqueWords=[...newSet(words.map(w=>w.toLowercase()))];
+const freq={};
+words.array.forEach(word => {
+const w=word.toLowercase();
+freq[w]=(freq[w]||0)+1;    
+});
+const sortedfreq=Object.entries(freq).sort(a,b)>b[i]-a[1];
+const output=`
+Total characters:${totalChars}
+Total words:${totalWords}
+Total Sentecs:${totalSentences}
+unique Words:${uniqueWords.join(",")}
+Words Frequency:
+${sortedfreq.map(([words,count])=>words+":"+count).join("\n")}
+`;
+document.getElementById("Output").textContent=output;
+}
+</script>  
+</body>
+</html>
